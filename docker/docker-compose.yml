@@ -1,0 +1,86 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: go-im-app
+    ports:
+      - "8080:8080"
+    environment:
+      # 基础配置
+      - IM_LISTEN_ADDR=:8080
+      - IM_REDIS_ADDR=redis:6379
+      - IM_REDIS_PASS=QWEqwe123
+      - IM_MYSQL_DSN=root:example@tcp(mysql:3306)/goim?parseTime=true&loc=Local&charset=utf8mb4
+      - IM_MESSAGE_DB=mysql
+      - IM_ENABLE_METRICS=true
+      # WebRTC（可选）
+      - IM_WEBRTC_ENABLED=true
+      - IM_WEBRTC_STUN_SERVERS=stun:stun.l.google.com:19302,stun:stun1.l.google.com:19302
+      - IM_WEBRTC_TURN_SERVERS=turn:turn:3478
+      - IM_WEBRTC_TURN_USER=webrtc
+      - IM_WEBRTC_TURN_PASS=webrtcpass
+      # OSS（可选）
+      - IM_OSS_ENABLED=false
+      # 初始 JWT（建议生产覆盖）
+      - IM_JWT_SECRET=change-me-in-prod
+    depends_on:
+      - mysql
+      - redis
+    volumes:
+      - ../web:/app/web:ro
+      - uploads:/app/uploads
+      - ./config.yml:/app/config.yml:ro
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.0
+    container_name: go-im-mysql
+    command: ["--character-set-server=utf8mb4","--collation-server=utf8mb4_unicode_ci"]
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_DATABASE=goim
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ../deployments/sql/schema.mysql.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: go-im-redis
+    command: ["redis-server", "--requirepass", "QWEqwe123"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # 可选：内置一个最简 TURN 服务器（非生产，可便于内网/NAT 测试）
+  turn:
+    image: coturn/coturn:latest
+    container_name: go-im-turn
+    ports:
+      - "3478:3478/udp"
+      - "3478:3478/tcp"
+      - "49160-49200:49160-49200/udp"
+    command: [
+      "-n", "--log-file=stdout",
+      "--min-port=49160", "--max-port=49200",
+      "--realm=go-im.local",
+      "--no-cli",
+      "--no-tls",
+      "--no-dtls",
+      "--lt-cred-mech",
+      "--user=webrtc:webrtcpass",
+      "--fingerprint"
+    ]
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  redis_data:
+  uploads: 

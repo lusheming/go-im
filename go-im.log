@@ -1,0 +1,206 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /healthz                  --> main.main.func3 (3 handlers)
+[GIN-debug] GET    /metrics                  --> main.main.WrapH.func55 (3 handlers)
+[GIN-debug] GET    /ui/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /ui/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /app/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /app/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /admin/*filepath          --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /admin/*filepath          --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /webrtc_test.html         --> main.main.(*RouterGroup).StaticFile.func56 (3 handlers)
+[GIN-debug] HEAD   /webrtc_test.html         --> main.main.(*RouterGroup).StaticFile.func56 (3 handlers)
+[GIN-debug] GET    /im                       --> main.main.(*RouterGroup).StaticFile.func57 (3 handlers)
+[GIN-debug] HEAD   /im                       --> main.main.(*RouterGroup).StaticFile.func57 (3 handlers)
+[GIN-debug] GET    /manifest.json            --> main.main.(*RouterGroup).StaticFile.func58 (3 handlers)
+[GIN-debug] HEAD   /manifest.json            --> main.main.(*RouterGroup).StaticFile.func58 (3 handlers)
+[GIN-debug] GET    /sw.js                    --> main.main.(*RouterGroup).StaticFile.func59 (3 handlers)
+[GIN-debug] HEAD   /sw.js                    --> main.main.(*RouterGroup).StaticFile.func59 (3 handlers)
+[GIN-debug] GET    /                         --> main.main.(*RouterGroup).StaticFile.func60 (3 handlers)
+[GIN-debug] HEAD   /                         --> main.main.(*RouterGroup).StaticFile.func60 (3 handlers)
+[GIN-debug] POST   /api/register             --> main.main.func4 (3 handlers)
+[GIN-debug] POST   /api/login                --> main.main.func5 (3 handlers)
+[GIN-debug] POST   /api/files/oss/policy     --> main.main.func7 (3 handlers)
+[GIN-debug] POST   /api/files/oss/confirm    --> main.main.func8 (3 handlers)
+[GIN-debug] PUT    /api/users/me             --> main.main.func9 (3 handlers)
+[GIN-debug] POST   /api/conversations/:id/pin --> main.main.func10 (3 handlers)
+[GIN-debug] POST   /api/conversations/:id/mute --> main.main.func11 (3 handlers)
+[GIN-debug] POST   /api/conversations/:id/draft --> main.main.func12 (3 handlers)
+[GIN-debug] GET    /api/users/search         --> main.main.func13 (3 handlers)
+[GIN-debug] GET    /api/friends              --> main.main.func14 (3 handlers)
+[GIN-debug] POST   /api/friends              --> main.main.func15 (3 handlers)
+[GIN-debug] PUT    /api/friends/:id          --> main.main.func16 (3 handlers)
+[GIN-debug] DELETE /api/friends/:id          --> main.main.func17 (3 handlers)
+[GIN-debug] GET    /api/groups               --> main.main.func18 (3 handlers)
+[GIN-debug] POST   /api/groups               --> main.main.func19 (3 handlers)
+[GIN-debug] POST   /api/groups/:id/join      --> main.main.func20 (3 handlers)
+[GIN-debug] GET    /api/unread/summary       --> main.main.func21 (3 handlers)
+[GIN-debug] POST   /api/unread/mark_all_read --> main.main.func22 (3 handlers)
+[GIN-debug] POST   /api/messages/recall      --> main.main.func23 (3 handlers)
+[GIN-debug] POST   /api/conversations/delete --> main.main.func24 (3 handlers)
+[GIN-debug] POST   /api/messages/read        --> main.main.func25 (3 handlers)
+[GIN-debug] GET    /api/messages/history     --> main.main.func26 (3 handlers)
+[GIN-debug] GET    /api/users/me/devices     --> main.main.func27 (3 handlers)
+[GIN-debug] GET    /api/conversations        --> main.main.func28 (3 handlers)
+[GIN-debug] GET    /ws                       --> go-im/internal/transport/ws.(*Server).Handle-fm (3 handlers)
+[GIN-debug] POST   /api/files/upload         --> main.main.func29 (3 handlers)
+[GIN-debug] GET    /api/files                --> main.main.func30 (3 handlers)
+[GIN-debug] DELETE /api/files/:fileId        --> main.main.func31 (3 handlers)
+[GIN-debug] GET    /files/*filepath          --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /files/*filepath          --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /api/favorites/message    --> main.main.func32 (3 handlers)
+[GIN-debug] POST   /api/favorites/custom     --> main.main.func33 (3 handlers)
+[GIN-debug] GET    /api/favorites            --> main.main.func34 (3 handlers)
+[GIN-debug] GET    /api/favorites/search     --> main.main.func35 (3 handlers)
+[GIN-debug] DELETE /api/favorites/:favoriteId --> main.main.func36 (3 handlers)
+[GIN-debug] GET    /api/favorites/stats      --> main.main.func37 (3 handlers)
+[GIN-debug] GET    /api/webrtc/ice-servers   --> main.main.func38 (3 handlers)
+[GIN-debug] GET    /api/webrtc/current-call  --> main.main.func39 (3 handlers)
+[GIN-debug] POST   /api/groups/:id/mute      --> main.main.func40 (3 handlers)
+[GIN-debug] POST   /api/groups/:id/members/:uid/mute_until --> main.main.func41 (3 handlers)
+[GIN-debug] POST   /api/groups/:id/notices   --> main.main.func42 (3 handlers)
+[GIN-debug] GET    /api/groups/:id/notices   --> main.main.func43 (3 handlers)
+[GIN-debug] POST   /api/admin/login          --> main.main.func44 (3 handlers)
+[GIN-debug] GET    /api/admin/stats          --> main.main.func46 (4 handlers)
+[GIN-debug] GET    /api/admin/users          --> main.main.func47 (4 handlers)
+[GIN-debug] POST   /api/admin/users/:id/ban  --> main.main.func48 (4 handlers)
+[GIN-debug] GET    /api/admin/groups         --> main.main.func49 (4 handlers)
+[GIN-debug] POST   /api/admin/groups/:id/disband --> main.main.func50 (4 handlers)
+[GIN-debug] GET    /api/admin/message-stats  --> main.main.func51 (4 handlers)
+[GIN-debug] GET    /api/admin/activities     --> main.main.func52 (4 handlers)
+[GIN-debug] GET    /api/admin/settings       --> main.main.func53 (4 handlers)
+[GIN-debug] PUT    /api/admin/settings       --> main.main.func54 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2025/08/10 - 19:25:27 | 404 |         686ns |             ::1 | GET      "/undefined/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:25:27 | 404 |         563ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:25:28 | 404 |         524ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:25:28 | 304 |     148.807µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:25:37 | 404 |         863ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:25:38 | 404 |         604ns |             ::1 | GET      "/undefined/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:25:40 | 304 |     101.172µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:25:42 | 200 |   12.024488ms |             ::1 | GET      "/im"
+[GIN] 2025/08/10 - 19:25:42 | 404 |         540ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:25:42 | 200 |      912.69µs |             ::1 | GET      "/manifest.json"
+2025/08/10 19:25:42 WS connected: user=422c3fc4-7265-4df8-aa1a-f2932b95694e device=web-1754825142965
+[GIN] 2025/08/10 - 19:25:43 | 200 |   25.703313ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:25:43 | 200 |    2.403511ms |             ::1 | GET      "/api/friends"
+[GIN] 2025/08/10 - 19:25:43 | 200 |    2.105498ms |             ::1 | GET      "/api/groups"
+[GIN] 2025/08/10 - 19:25:43 | 404 |       1.602µs |             ::1 | GET      "/favicon.ico"
+[GIN] 2025/08/10 - 19:25:43 | 200 |     214.637µs |             ::1 | GET      "/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:25:50 | 200 |    1.839562ms |             ::1 | GET      "/api/users/search?q=123"
+[GIN] 2025/08/10 - 19:25:54 | 200 |    1.841896ms |             ::1 | GET      "/api/users/search?q=12"
+[GIN] 2025/08/10 - 19:26:03 | 404 |         775ns |             ::1 | GET      "/api/conversations/c2c-422c3fc4-7265-4df8-aa1a-f2932b95694e-234/messages?limit=50"
+[GIN] 2025/08/10 - 19:26:08 | 404 |         513ns |             ::1 | GET      "/undefined/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:26:09 | 304 |      83.088µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:26:14 | 200 |   85.093245ms |             ::1 | POST     "/api/login"
+2025/08/10 19:26:14 WS connected: user=422c3fc4-7265-4df8-aa1a-f2932b95694e device=web-1754825174836
+[GIN] 2025/08/10 - 19:26:14 | 200 |    2.311849ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:26:14 | 200 |    2.037161ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:14 | 200 |    1.680433ms |             ::1 | GET      "/api/conversations?limit=100"
+2025/08/10 19:26:19 WS read error: user=422c3fc4-7265-4df8-aa1a-f2932b95694e err=websocket: close 1005 (no status)
+[GIN] 2025/08/10 - 19:26:21 | 200 |    2.289079ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:25 | 404 |         824ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:26:28 | 304 |      73.092µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:26:30 | 200 |   75.529361ms |             ::1 | POST     "/api/login"
+2025/08/10 19:26:30 WS connected: user=d0809806-4259-4297-9fcb-666919f52ff6 device=web-1754825190772
+[GIN] 2025/08/10 - 19:26:30 | 200 |    5.115203ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:26:30 | 200 |    3.436416ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:30 | 200 |    1.732898ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:32 | 200 |    1.745764ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:36 | 204 |    5.726901ms |             ::1 | POST     "/api/friends"
+[GIN] 2025/08/10 - 19:26:43 | 200 |    1.735129ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:26:51 | 204 |    6.613491ms |             ::1 | POST     "/api/friends"
+[GIN] 2025/08/10 - 19:27:03 | 200 |    2.564853ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:04 | 200 |    2.228473ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:05 | 200 |     1.87489ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:05 | 200 |    2.127294ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:06 | 200 |    1.951813ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:07 | 200 |    3.201276ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:07 | 200 |    2.506518ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:13 | 200 |    2.276496ms |             ::1 | GET      "/api/conversations?limit=100"
+2025/08/10 19:27:15 WS read error: user=d0809806-4259-4297-9fcb-666919f52ff6 err=websocket: close 1001 (going away)
+[GIN] 2025/08/10 - 19:27:15 | 404 |         674ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:27:17 | 404 |         787ns |             ::1 | GET      "/undefined/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:27:18 | 304 |     118.311µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:27:19 | 404 |         600ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:21 | 404 |         775ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:22 | 404 |         602ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:23 | 404 |         685ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:27:26 | 200 |    1.612086ms |             ::1 | GET      "/im"
+[GIN] 2025/08/10 - 19:27:26 | 404 |         878ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+2025/08/10 19:27:26 WS connected: user=d0809806-4259-4297-9fcb-666919f52ff6 device=web-1754825246741
+[GIN] 2025/08/10 - 19:27:26 | 200 |     987.636µs |             ::1 | GET      "/manifest.json"
+[GIN] 2025/08/10 - 19:27:26 | 200 |    3.161881ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:27:26 | 200 |    2.262531ms |             ::1 | GET      "/api/friends"
+[GIN] 2025/08/10 - 19:27:26 | 200 |    2.084512ms |             ::1 | GET      "/api/groups"
+[GIN] 2025/08/10 - 19:27:26 | 404 |         738ns |             ::1 | GET      "/favicon.ico"
+[GIN] 2025/08/10 - 19:27:27 | 200 |      87.175µs |             ::1 | GET      "/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:27:33 | 404 |         479ns |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-123/messages?limit=50"
+[GIN] 2025/08/10 - 19:27:35 | 404 |         616ns |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-422c3fc4-7265-4df8-aa1a-f2932b95694e/messages?limit=50"
+2025/08/10 19:27:39 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_start size=91
+2025/08/10 19:27:39 WS write error: user=422c3fc4-7265-4df8-aa1a-f2932b95694e err=websocket: close sent
+2025/08/10 19:27:39 WS disconnected: user=422c3fc4-7265-4df8-aa1a-f2932b95694e device=web-1754825142965
+[GIN] 2025/08/10 - 19:27:39 | 200 |         1m56s |             ::1 | GET      "/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MjJjM2ZjNC03MjY1LTRkZjgtYWExYS1mMjkzMmI5NTY5NGUiLCJleHAiOjE3NTU0MjgzNzYsImlhdCI6MTc1NDgyMzU3Nn0.veCmLKdQVxBG1HeMaJ9_ui2ONd7d_MaNIGtksz5MPlM&deviceId=web-1754825142965"
+2025/08/10 19:27:43 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=call_answer size=81
+2025/08/10 19:27:43 WS write error: user=d0809806-4259-4297-9fcb-666919f52ff6 err=websocket: close sent
+2025/08/10 19:27:43 WS disconnected: user=d0809806-4259-4297-9fcb-666919f52ff6 device=web-1754825190772
+[GIN] 2025/08/10 - 19:27:43 | 200 |         1m12s |             ::1 | GET      "/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMDgwOTgwNi00MjU5LTQyOTctOWZjYi02NjY5MTlmNTJmZjYiLCJleHAiOjE3NTU0Mjk5OTAsImlhdCI6MTc1NDgyNTE5MH0.yfhRp1W_CaB5TuVcYL7Q6zospxqKj3_DJxZWHO1S2dE&deviceId=web-1754825190772"
+[GIN] 2025/08/10 - 19:27:43 | 404 |       1.626µs |             ::1 | GET      "/favicon.ico"
+2025/08/10 19:27:43 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=6388
+2025/08/10 19:27:43 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=353
+2025/08/10 19:27:43 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=353
+2025/08/10 19:27:43 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=webrtc_signaling size=6086
+2025/08/10 19:27:43 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=webrtc_signaling size=354
+2025/08/10 19:27:43 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=365
+[GIN] 2025/08/10 - 19:27:43 | 404 |       1.809µs |             ::1 | GET      "/favicon.ico"
+2025/08/10 19:28:25 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=call_answer size=81
+2025/08/10 19:28:26 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=call_reject size=81
+2025/08/10 19:28:35 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_start size=91
+2025/08/10 19:28:35 WS write error: user=422c3fc4-7265-4df8-aa1a-f2932b95694e err=write tcp [::1]:8080->[::1]:60359: i/o timeout
+2025/08/10 19:28:35 WS disconnected: user=422c3fc4-7265-4df8-aa1a-f2932b95694e device=web-1754825174836
+2025/08/10 19:28:35 WS read error: user=422c3fc4-7265-4df8-aa1a-f2932b95694e err=read tcp [::1]:8080->[::1]:60359: use of closed network connection
+[GIN] 2025/08/10 - 19:28:35 | 200 |         2m20s |             ::1 | GET      "/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MjJjM2ZjNC03MjY1LTRkZjgtYWExYS1mMjkzMmI5NTY5NGUiLCJleHAiOjE3NTU0Mjk5NzQsImlhdCI6MTc1NDgyNTE3NH0._X1oF1G0EKdSOKGF92C5sChX96ownl08xqvuHnvU7Aw&deviceId=web-1754825174836"
+2025/08/10 19:28:36 WS connected: user=422c3fc4-7265-4df8-aa1a-f2932b95694e device=web-1754825316227
+[GIN] 2025/08/10 - 19:28:36 | 200 |    3.022528ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:28:36 | 200 |    3.623387ms |             ::1 | GET      "/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:28:36 | 200 |    1.907252ms |             ::1 | GET      "/api/conversations?limit=100"
+2025/08/10 19:28:41 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_end size=78
+[GIN] 2025/08/10 - 19:28:43 | 404 |         674ns |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-123/messages?limit=50"
+2025/08/10 19:28:46 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_start size=58
+2025/08/10 19:28:50 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_start size=58
+[GIN] 2025/08/10 - 19:28:51 | 404 |         435ns |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-422c3fc4-7265-4df8-aa1a-f2932b95694e/messages?limit=50"
+[GIN] 2025/08/10 - 19:28:53 | 404 |       9.819µs |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-123/messages?limit=50"
+2025/08/10 19:28:53 WS read error: user=d0809806-4259-4297-9fcb-666919f52ff6 err=websocket: close 1001 (going away)
+[GIN] 2025/08/10 - 19:28:54 | 404 |       2.498µs |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:28:55 | 404 |         651ns |             ::1 | GET      "/undefined/api/conversations?limit=100"
+[GIN] 2025/08/10 - 19:28:55 | 404 |         493ns |             ::1 | GET      "/undefined/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:28:56 | 304 |      74.162µs |             ::1 | GET      "/sw.js"
+[GIN] 2025/08/10 - 19:28:58 | 200 |    1.824161ms |             ::1 | GET      "/im"
+[GIN] 2025/08/10 - 19:28:58 | 404 |         777ns |             ::1 | GET      "/.well-known/appspecific/com.chrome.devtools.json"
+[GIN] 2025/08/10 - 19:28:58 | 200 |     904.068µs |             ::1 | GET      "/manifest.json"
+2025/08/10 19:28:58 WS connected: user=d0809806-4259-4297-9fcb-666919f52ff6 device=web-1754825338834
+[GIN] 2025/08/10 - 19:28:58 | 200 |    3.702355ms |             ::1 | GET      "/api/conversations?limit=50"
+[GIN] 2025/08/10 - 19:28:58 | 200 |    2.329454ms |             ::1 | GET      "/api/friends"
+[GIN] 2025/08/10 - 19:28:58 | 200 |    2.088928ms |             ::1 | GET      "/api/groups"
+[GIN] 2025/08/10 - 19:28:59 | 404 |         663ns |             ::1 | GET      "/favicon.ico"
+[GIN] 2025/08/10 - 19:28:59 | 200 |      98.186µs |             ::1 | GET      "/api/webrtc/ice-servers"
+[GIN] 2025/08/10 - 19:29:00 | 404 |         640ns |             ::1 | GET      "/api/conversations/c2c-d0809806-4259-4297-9fcb-666919f52ff6-422c3fc4-7265-4df8-aa1a-f2932b95694e/messages?limit=50"
+2025/08/10 19:29:02 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_start size=91
+2025/08/10 19:29:05 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=call_answer size=81
+2025/08/10 19:29:05 WS write error: user=d0809806-4259-4297-9fcb-666919f52ff6 err=write tcp [::1]:8080->[::1]:60659: i/o timeout
+2025/08/10 19:29:05 WS disconnected: user=d0809806-4259-4297-9fcb-666919f52ff6 device=web-1754825246741
+[GIN] 2025/08/10 - 19:29:05 | 200 |         1m39s |             ::1 | GET      "/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMDgwOTgwNi00MjU5LTQyOTctOWZjYi02NjY5MTlmNTJmZjYiLCJleHAiOjE3NTU0Mjk5OTAsImlhdCI6MTc1NDgyNTE5MH0.yfhRp1W_CaB5TuVcYL7Q6zospxqKj3_DJxZWHO1S2dE&deviceId=web-1754825246741"
+2025/08/10 19:29:05 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=6386
+2025/08/10 19:29:05 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=354
+2025/08/10 19:29:05 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=webrtc_signaling size=354
+2025/08/10 19:29:06 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=webrtc_signaling size=6087
+2025/08/10 19:29:06 WS inbound: user=422c3fc4-7265-4df8-aa1a-f2932b95694e action=webrtc_signaling size=354
+[GIN] 2025/08/10 - 19:29:06 | 404 |       1.855µs |             ::1 | GET      "/favicon.ico"
+2025/08/10 19:29:22 WS inbound: user=d0809806-4259-4297-9fcb-666919f52ff6 action=call_end size=78
+2025/08/10 19:55:22 WS read error: user=d0809806-4259-4297-9fcb-666919f52ff6 err=websocket: close 1001 (going away)

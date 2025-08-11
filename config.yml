@@ -1,0 +1,43 @@
+listenAddr: ":8080"
+tcpAddr: ""
+redisAddr: "127.0.0.1:6379"
+redisDB: 0
+redisPass: "QWEqwe123"
+
+mysqlDSN: "root:QWEqwe123@tcp(127.0.0.1:3306)/goim?parseTime=true&loc=Local&charset=utf8mb4"
+tidbDSN: "root:@tcp(127.0.0.1:4000)/goim?parseTime=true&loc=Local&charset=utf8mb4"
+mongoURI: "mongodb://127.0.0.1:27017/goim"
+jwtSecret: "change-me-in-prod"
+
+messageDB: "mysql"  # 可选: mysql | tidb | mongodb
+
+kafkaBrokers: ""  # 示例: 127.0.0.1:9092,127.0.0.1:9093
+kafkaGroupUpdateTopic: "im-group-update"
+
+groupBatchSize: 500
+groupBatchSleepMS: 50
+markAllReadChunkSize: 200
+markAllReadConcurrency: 4
+markAllReadRetry: 3
+
+wsSendQPS: 20
+wsSendBurst: 40
+enableMetrics: true
+
+webrtcEnabled: true
+webrtcSTUNServers:
+  - stun:stun.l.google.com:19302
+  - stun:stun1.l.google.com:19302
+webrtcTURNServers: []
+webrtcTURNUser: ""
+webrtcTURNPass: ""
+
+ossEnabled: false
+ossAccessKeyId: ""
+ossAccessKeySecret: ""
+ossBucket: ""
+ossEndpoint: ""
+ossPublicHost: ""
+ossPrefix: "uploads/"
+ossMaxSizeMB: 50
+ossExpireSeconds: 60 
